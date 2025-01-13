@@ -131,7 +131,7 @@ function makeReservation() {
 }
 
 4. 예약 데이터 저장 및 불러오기
-**localStorage**를 활용하여 예약 데이터를 브라우저에 저장하고, 프로그램 초기화 시 데이터를 불러와 지속적인 관리가 가능합니다.
+localStorage를 활용하여 예약 데이터를 브라우저에 저장하고, 프로그램 초기화 시 데이터를 불러와 지속적인 관리가 가능합니다.
 javascript
 function saveReservations() {
     localStorage.setItem("reservations", JSON.stringify(reservations));
