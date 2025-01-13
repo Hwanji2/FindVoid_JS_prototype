@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강의실 예약 시스템</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>강의실 예약 시스템</h1>
+
+        <!-- 건물 및 강의실 선택 -->
+        <div class="form-section">
+            <h2>건물 및 강의실 선택</h2>
+            <label for="buildingSelect">건물 선택</label>
+            <select id="buildingSelect" onchange="updateRoomOptions()">
+                <option value="">건물을 선택하세요</option>
+            </select>
+
+            <label for="roomSelect">강의실 선택</label>
+            <select id="roomSelect">
+                <option value="">강의실을 선택하세요</option>
+            </select>
+        </div>
+
+        <!-- 시간표 UI -->
+        <div class="form-section" id="timetable-section">
+            <h2>시간표</h2>
+            <table id="timetable" border="1">
+                <thead>
+                    <tr>
+                        <th>시간</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                        <th>일</th>
+                    </tr>
+                </thead>
+                <tbody id="timetableBody"></tbody>
+            </table>
+        </div>
+
+        <!-- 예약 입력 폼 -->
+        <div class="form-section">
+            <h2>예약 입력</h2>
+            <label for="daySelect">요일 선택</label>
+            <select id="daySelect">
+                <option value="0">월요일</option>
+                <option value="1">화요일</option>
+                <option value="2">수요일</option>
+                <option value="3">목요일</option>
+                <option value="4">금요일</option>
+                <option value="5">토요일</option>
+                <option value="6">일요일</option>
+            </select>
+
+            <label for="timeSlotSelect">시간 선택</label>
+            <select id="timeSlotSelect">
+                <option value="9">9시</option>
+                <option value="10">10시</option>
+                <option value="11">11시</option>
+                <option value="12">12시</option>
+                <option value="13">13시</option>
+                <option value="14">14시</option>
+                <option value="15">15시</option>
+                <option value="16">16시</option>
+                <option value="17">17시</option>
+            </select>
+
+            <label for="userId">사용자 ID</label>
+            <input type="text" id="userId" placeholder="사용자 ID 입력">
+
+            <label for="studentId">학번</label>
+<input type="text" id="studentId" placeholder="학번 입력">
+
+<label for="additionalIds">같이 사용할 사람 학번 (쉼표로 구분)</label>
+<input type="text" id="additionalIds" placeholder="같이 사용할 사람 학번 입력">
+
+
+            <label for="purpose">사용 목적</label>
+            <input type="text" id="purpose" placeholder="사용 목적 입력">
+
+            <button onclick="makeReservation()">예약하기</button>
+        </div>
+
+        <div id="reservationResult" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
