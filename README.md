@@ -9,10 +9,10 @@
 
 ## 📂 파일 구조
 
-root/
-├── index.html              # Main HTML file containing the UI
-├── style.css               # CSS for styling the UI
-└── script.js               # JavaScript logic for reservation management
+- root/
+- ├── index.html              # Main HTML file containing the UI
+- ├── style.css               # CSS for styling the UI
+- └── script.js               # JavaScript logic for reservation management
 
 
 ### **1. `index.html`**
